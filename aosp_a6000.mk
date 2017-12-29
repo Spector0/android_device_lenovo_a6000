@@ -21,6 +21,9 @@ $(call inherit-product, vendor/aosp/common.mk)
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
+#get the list of apns
+PRODUCT_COPY_FILES += device/oneplus/bacon/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := Kraft-T,a6000,K30-T,A6000,Kraft-W,Kraft-C,k30t,msm8916,Kraft-A6000,wt86518
 
