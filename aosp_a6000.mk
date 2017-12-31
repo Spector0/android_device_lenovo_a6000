@@ -18,6 +18,9 @@ $(call inherit-product, device/lenovo/a6000/full_a6000.mk)
 # Inherit some common AEX stuff.
 $(call inherit-product, vendor/aosp/common.mk)
 
+#get the list of apns
+PRODUCT_COPY_FILES += device/lenovo/a6000/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
